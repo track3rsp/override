@@ -1,0 +1,3 @@
+gcc -shared -fPIC -o liboverride.so override.c -ldl
+gcc -o test test.c
+LD_PRELOAD=./liboverride.so ./test
